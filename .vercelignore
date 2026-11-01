@@ -1,0 +1,11 @@
+.venv/
+tests/
+eval/
+docs/
+data/raw/
+data/chroma/
+data/text/
+__pycache__/
+*.md
+app.py
+.env

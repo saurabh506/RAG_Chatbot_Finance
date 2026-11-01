@@ -1,0 +1,8 @@
+{
+  "functions": {
+    "api/answer.py": {
+      "maxDuration": 15,
+      "includeFiles": "{config.py,rag/**,ingest/**,obs/**,data/chunks.jsonl,data/docs.jsonl,data/embeddings.npy,data/embed_ids.json,data/facts.json}"
+    }
+  }
+}

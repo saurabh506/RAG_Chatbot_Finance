@@ -206,8 +206,9 @@ def _from_vector(
         kind = "clarify" if intent == "UNKNOWN" else "none"
         return Answer(text, _amc_url(), None, intent, scheme_id, kind)
     best = hits[0]
+    body = best.text.split(" | ", 2)[-1]  # drop the "scheme | section |" prefix
     return Answer(
-        _clip(best.text),
+        _clip(body),
         best.metadata["source_url"],
         str(best.metadata["fetched_at"])[:10],
         intent,
