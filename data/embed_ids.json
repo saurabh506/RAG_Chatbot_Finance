@@ -1,11 +1,11 @@
 {
   "backend": "hash",
-  "requested_backend": "minilm",
+  "requested_backend": "hash",
   "model": "hash-md5-256",
   "dim": 256,
   "normalised": true,
   "chunk_count": 76,
-  "built_at": "2026-11-01T07:12:12+00:00",
+  "built_at": "2026-11-01T09:54:56+00:00",
   "ids": [
     "groww-amc#hdfc-mutual-fund-0",
     "groww-amc#list-of-hdfc-mutual-fund-in-india-1",
@@ -83,6 +83,5 @@
     "hdfc-mid-direct-growth#fund-house-12",
     "process#statement-cas",
     "process#statement-capital-gains"
-  ],
-  "fallback_reason": "ModuleNotFoundError: No module named 'sentence_transformers'"
+  ]
 }

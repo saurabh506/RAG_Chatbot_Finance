@@ -19,6 +19,7 @@ data/chroma/
 data/validation_cache.json
 data/requests.log
 data/fetch_log.json
+data/fetch_meta.json
 
 # OS noise
 .DS_Store
