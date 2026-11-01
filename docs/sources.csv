@@ -1,0 +1,23 @@
+id,tier,title,url,purpose,mode,fetched_at,http_status,bytes,used_for_facts
+groww-amc,groww,HDFC Mutual Fund - AMC overview,https://groww.in/mutual-funds/amc/hdfc-mutual-funds,amc-overview,extract,2026-11-01,200,249581,yes
+hdfc-large-direct-growth,groww,HDFC Large Cap Fund - Direct Growth,https://groww.in/mutual-funds/hdfc-large-cap-fund-direct-growth,scheme-facts,extract,2026-11-01,200,459953,yes
+hdfc-flexi-direct-growth,groww,HDFC Flexi Cap - Direct Plan Growth,https://groww.in/mutual-funds/hdfc-equity-fund-direct-growth,scheme-facts,extract,2026-11-01,200,500723,yes
+hdfc-elss-direct-growth,groww,HDFC ELSS Tax Saver - Direct Plan Growth,https://groww.in/mutual-funds/hdfc-elss-tax-saver-fund-direct-plan-growth,scheme-facts,extract,2026-11-01,200,458094,yes
+hdfc-mid-direct-growth,groww,HDFC Mid Cap Fund - Direct Growth,https://groww.in/mutual-funds/hdfc-mid-cap-fund-direct-growth,scheme-facts,extract,2026-11-01,200,496243,yes
+amc-home,amc,HDFC Mutual Fund - home,https://www.hdfcfund.com/,amc-overview,link-only,,link-only,0,no
+amc-factsheets,amc,HDFC MF - factsheets,https://www.hdfcfund.com/mutual-funds/factsheets,performance-link,link-only,,link-only,0,no
+amc-statements,amc,HDFC MF - consolidated account statement,https://www.hdfcfund.com/services/consolidated-account-statement,process,link-only,,link-only,0,no
+amc-ter,amc,HDFC MF - total expense ratio reports,https://www.hdfcfund.com/statutory-disclosure/total-expense-ratio-of-mutual-fund-schemes/reports,regulatory,link-only,,link-only,0,no
+amc-nav,amc,HDFC MF - NAV and IDCW,https://www.hdfcfund.com/nav-and-idcw,reference,link-only,,link-only,0,no
+amc-portfolio,amc,HDFC MF - monthly portfolio,https://www.hdfcfund.com/statutory-disclosure/portfolio/monthly-portfolio,reference,link-only,,link-only,0,no
+amfi-home,amfi,AMFI - home,https://www.amfiindia.com/,education,link-only,,link-only,0,no
+amfi-mutual-fund,amfi,AMFI - mutual fund section,https://www.amfiindia.com/mutual-fund,education,link-only,,link-only,0,no
+amfi-nav,amfi,AMFI - NAV file (NAVAll.txt),https://www.amfiindia.com/spages/NAVAll.txt,reference,link-only,,link-only,0,no
+sebi-home,sebi,SEBI - home,https://www.sebi.gov.in/,regulatory,link-only,,link-only,0,no
+sebi-investor,sebi,SEBI Investor - education,https://investor.sebi.gov.in/,education,link-only,,link-only,0,no
+sebi-regulations,sebi,SEBI - regulations,https://www.sebi.gov.in/sebiweb/home/HomeAction.do?doListing=yes&sid=1&ssid=3&smid=0,regulatory,link-only,,link-only,0,no
+sebi-circulars,sebi,SEBI - circulars,https://www.sebi.gov.in/sebiweb/home/HomeAction.do?doListing=yes&sid=1&ssid=7&smid=0,regulatory,link-only,,link-only,0,no
+cams,rta,CAMS - investor services,https://www.camsonline.com/,process,link-only,,link-only,0,no
+kfintech,rta,KFintech - investor services,https://www.kfintech.com/,process,link-only,,link-only,0,no
+groww-help-statement,groww,Groww Help - capital gains statement,https://groww.in/help/mutual-funds/how-to-download-capital-gains-statement,process,link-only,,link-only,0,no
+groww-help-home,groww,Groww Help - mutual funds,https://groww.in/help/mutual-funds,process,link-only,,link-only,0,no

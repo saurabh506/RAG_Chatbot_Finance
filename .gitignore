@@ -1,0 +1,25 @@
+# Virtualenv
+.venv/
+venv/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# Secrets
+.streamlit/secrets.toml
+.env
+
+# Raw scrape cache (large, regenerable)
+data/raw/
+
+# Local vector store + caches (rebuilt from artifacts)
+data/chroma/
+data/validation_cache.json
+data/requests.log
+data/fetch_log.json
+
+# OS noise
+.DS_Store
+Thumbs.db
