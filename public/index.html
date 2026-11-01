@@ -3,112 +3,18 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Facts-only answers about HDFC Mutual Fund schemes, each with one official source.">
 <title>MF Facts · HDFC Mutual Fund</title>
-<style>
-  :root { --bg:#fff; --fg:#1d2433; --muted:#5b6475; --line:#d9dde6; --card:#f6f7fa; --accent:#1a56db; }
-  @media (prefers-color-scheme: dark) {
-    :root { --bg:#12151c; --fg:#e8ebf2; --muted:#9aa3b5; --line:#2b3140; --card:#1a1f2b; --accent:#7aa2ff; }
-  }
-  * { box-sizing: border-box; }
-  body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.5 system-ui, sans-serif; }
-  main { max-width: 680px; margin: 0 auto; padding: 24px 16px 48px; }
-  h1 { font-size: 1.5rem; margin: 0 0 4px; }
-  .muted { color: var(--muted); font-size: .875rem; }
-  .chips { display:flex; flex-wrap:wrap; gap:8px; margin:20px 0 12px; }
-  button.chip { background:var(--card); color:var(--fg); border:1px solid var(--line); border-radius:999px;
-    padding:8px 14px; font:inherit; font-size:.875rem; cursor:pointer; text-align:left; }
-  button.chip:hover { border-color: var(--accent); }
-  form { display:flex; gap:8px; }
-  input { flex:1; min-width:0; padding:10px 12px; font:inherit; color:var(--fg); background:var(--bg);
-    border:1px solid var(--line); border-radius:8px; }
-  button.ask { padding:10px 16px; font:inherit; color:#fff; background:var(--accent); border:0; border-radius:8px; cursor:pointer; }
-  button:disabled { opacity:.6; cursor:default; }
-  #out { margin-top:20px; }
-  .card { background:var(--card); border:1px solid var(--line); border-radius:10px; padding:14px 16px; }
-  .label { color:var(--muted); font-size:.8125rem; margin-bottom:4px; }
-  .card p { margin:0 0 10px; }
-  .card a { color:var(--accent); word-break:break-all; }
-</style>
+<link rel="stylesheet" href="/styles.css">
 </head>
 <body>
-<main>
-  <h1>MF Facts · HDFC Mutual Fund</h1>
-  <div class="muted">Facts-only. No investment advice.</div>
+<div class="glow" aria-hidden="true"></div>
+<div id="root"></div>
+<noscript><p style="padding:24px">This page needs JavaScript to run.</p></noscript>
 
-  <div class="chips" id="chips"></div>
-
-  <form id="form">
-    <input id="q" maxlength="300" autocomplete="off"
-           placeholder="Ask about expense ratio, exit load, lock-in…" aria-label="Your question">
-    <button class="ask" id="go" type="submit">Ask</button>
-  </form>
-
-  <div id="out" aria-live="polite"></div>
-  <p class="muted">Facts-only. No investment advice.</p>
-</main>
-
-<script>
-const EXAMPLES = [
-  "What is the expense ratio of HDFC ELSS Tax Saver?",
-  "What is the exit load of HDFC Mid Cap Fund?",
-  "How do I download my capital gains statement?",
-];
-const LABELS = {
-  answer: "Answer",
-  refusal: "I can't help with that",
-  clarify: "Need a bit more detail",
-  unverifiable: "Couldn't verify this figure",
-};
-const $ = (id) => document.getElementById(id);
-
-for (const text of EXAMPLES) {
-  const b = document.createElement("button");
-  b.type = "button"; b.className = "chip"; b.textContent = text;
-  b.addEventListener("click", () => { $("q").value = text; ask(text); });
-  $("chips").appendChild(b);
-}
-$("form").addEventListener("submit", (e) => { e.preventDefault(); ask($("q").value); });
-
-function show(kind, text, url, date) {
-  const card = document.createElement("div");
-  card.className = "card";
-  const label = document.createElement("div");
-  label.className = "label"; label.textContent = LABELS[kind] || LABELS.clarify;
-  const p = document.createElement("p"); p.textContent = text;
-  card.append(label, p);
-  if (url && url.startsWith("https://")) {
-    const a = document.createElement("a");
-    a.href = url; a.textContent = url; a.target = "_blank"; a.rel = "noopener noreferrer";
-    const wrap = document.createElement("p"); wrap.appendChild(a); card.appendChild(wrap);
-  }
-  if (date) {
-    const d = document.createElement("div");
-    d.className = "muted"; d.textContent = "Last updated from sources: " + date;
-    card.appendChild(d);
-  }
-  $("out").replaceChildren(card);
-}
-
-async function ask(question) {
-  question = question.trim();
-  if (!question) return;
-  $("go").disabled = true;
-  try {
-    const res = await fetch("/api/answer", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ question }),
-    });
-    const data = await res.json();
-    if (res.status === 400) return show("clarify", "Please enter a question of up to 300 characters.");
-    if (res.status === 503 || data.error) return show("clarify", "The service is unavailable right now. Please try again shortly.");
-    show(data.answer_type, data.text, data.citation_url, data.last_updated);
-  } catch {
-    show("clarify", "Couldn't reach the service. Please try again.");
-  } finally {
-    $("go").disabled = false;
-  }
-}
-</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.3.1/umd/react.production.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.3.1/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/htm@3.1.1/dist/htm.umd.js"></script>
+<script src="/app.js"></script>
 </body>
 </html>
