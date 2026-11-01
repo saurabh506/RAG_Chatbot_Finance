@@ -1,4 +1,4 @@
-"""MF Facts - Streamlit UI (implementation.md Step 8).
+"""Nivesh - Streamlit UI (implementation.md Step 8).
 
 Renders `rag.retrieve.answer()`; contains no fact strings of its own.
 """
@@ -80,8 +80,8 @@ def render(a: Answer) -> None:
 
 
 def main() -> None:
-    st.set_page_config(page_title="MF Facts - HDFC Mutual Fund", layout="centered")
-    st.title("MF Facts · HDFC Mutual Fund")
+    st.set_page_config(page_title="Nivesh - HDFC Mutual Fund Facts", layout="centered")
+    st.title("Nivesh · HDFC Mutual Fund Facts")
     st.caption(DISCLAIMER)
 
     columns = st.columns(len(EXAMPLES))

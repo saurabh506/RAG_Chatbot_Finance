@@ -47,6 +47,13 @@ main { position: relative; z-index: 1; max-width: 880px; margin: 0 auto; padding
 
 /* ---------- hero ---------- */
 .hero { animation: rise .8s var(--ease) both; }
+.brand { display: flex; align-items: center; gap: 10px; margin-bottom: 18px; }
+.logo {
+  display: grid; place-items: center; width: 38px; height: 38px; border-radius: 12px; color: #fff;
+  font-weight: 800; font-size: 1.25rem; background: var(--g-main); background-size: 200% 100%;
+  box-shadow: 0 10px 20px -10px var(--blue); animation: shine 6s linear infinite;
+}
+.wordmark { font-weight: 800; font-size: 1.5rem; letter-spacing: -.03em; }
 .badge {
   display: inline-flex; align-items: center; gap: 8px; font-size: .8125rem; font-weight: 700;
   padding: 6px 14px; border-radius: 999px; color: #04694f; background: rgba(0, 208, 156, .18);

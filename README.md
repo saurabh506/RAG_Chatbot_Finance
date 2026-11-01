@@ -1,4 +1,4 @@
-# MF Facts - HDFC Mutual Fund FAQ assistant
+# Nivesh - HDFC Mutual Fund FAQ assistant
 
 Facts-only assistant over **1 AMC page + 4 HDFC schemes**. Every answer carries
 exactly one official source link. No advice, no returns, no PII.

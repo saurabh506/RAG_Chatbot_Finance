@@ -1,4 +1,4 @@
-/* MF Facts UI: React 18 + htm (no build step). Renders /api/answer responses. */
+/* Nivesh UI: React 18 + htm (no build step). Renders /api/answer responses. */
 const { useState, useRef, useEffect, useMemo } = React;
 const html = htm.bind(React.createElement);
 
@@ -125,6 +125,7 @@ function App() {
     </div>
     <main>
       <header class="hero">
+        <div class="brand"><span class="logo">N</span><span class="wordmark">Nivesh</span></div>
         <span class="badge"><i></i>Facts-only · No investment advice</span>
         <h1>Know your fund,<br /><span class="grad">in one honest answer.</span></h1>
         <p class="sub">Official facts on four HDFC mutual fund schemes. Every answer comes with exactly one source link.</p>
